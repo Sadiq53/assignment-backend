@@ -11,6 +11,6 @@ app.use(cors());
 app.use(routes);
 
 const PORT = process.env.PORT || 8080
-app.listen(port, (req, res)=>{
+app.listen(PORT, (req, res)=>{
     console.log("server running with port", PORT)
 });
