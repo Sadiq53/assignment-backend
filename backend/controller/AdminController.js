@@ -7,9 +7,19 @@ let sha = require("sha1")
 
 
 route.get("/", async(req, res)=>{
-    
+    res.send({data : await adminSchema.find()})
 })
 
+route.post("/test", async(req, res)=>{
+    console.log(req.body)
+    console.log(req.file)
+    console.log(req.files)
+    console.log(req)
+    // console.log(req.file)
+
+    // let data = req.formData();
+    // let file = data.
+})
 
 route.get("/:id", async(req, res)=>{
     if(req.headers.authorization){
